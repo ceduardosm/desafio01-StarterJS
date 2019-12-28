@@ -1,0 +1,85 @@
+<header>
+  </header>
+
+  <body>
+
+
+    <script>
+      var endereco = {
+        rua: "Rua dos pinheiros",
+        numero: 1293,
+        bairro: "Centro",
+        cidade: "Sao Paulo",
+        uf: "SP"
+      };
+
+      console.log(endereco);
+
+      function retornaEndereco(objeto){
+        console.log('O usuario mora em '+objeto.cidade+' /'+objeto.uf + 
+                    ', no bairo '+objeto.bairro+', na rua '+objeto.rua+
+                    ' com numero '+objeto.numero);
+      }
+
+      retornaEndereco(endereco);
+
+      function pares(x,y) {
+        while (x <= y) {
+            if (x % 2 == 0) {
+              console.log(x);
+            }  
+          x++;  
+        }
+      }
+
+      pares(32,321);
+
+      var skills = ['Javascript', 'ReactJS', 'React Native'];
+
+      function temHabilidade(skills) {
+        const found = skills.find(element => element = 'Javascript');
+        console.log(found);
+      }
+      
+      temHabilidade(skills);
+      
+      //4 Exercicio
+
+      function experiencia(anos) {
+        if (anos >=0 && anos <= 1) {
+          console.log('de 0-1 ano: Iniciante');
+        } else if (anos >=1 && anos <=3){
+          console.log('de 1-3 anos: Intermediario');
+        } else if (anos >=3 && anos <= 6){
+          console.log('de 3-6 anos: Avancado')
+        } else if (anos >=7) {
+          console.log('de 7 acima: Jedi Master');
+        }
+      }
+
+      var anosEstudo = 7;
+      experiencia(anosEstudo);
+
+      //5 exercicio
+      var usuarios = [
+        {
+          nome: "Diego",
+          habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+          nome: "Gabriel",
+          habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }
+      ];
+
+      function exibeUsuarios(usu) {
+        for (var habil of usu) {
+          console.log('O '+habil.nome+' possui as habilidades:'+habil.habilidades.join());
+        }
+      }
+
+      exibeUsuarios(usuarios);
+
+    </script>
+
+  </body>
